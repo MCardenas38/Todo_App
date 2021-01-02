@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
     public static final String KEY_ITEM_POSITION= "item_position";
     public static final int EDIT_TEXT_CODE= 20;
 
-
     List<String> items;
 
     Button btnAdd;
@@ -37,13 +36,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //selects elements from app
         btnAdd= findViewById(R.id.btnAdd);
         etItem= findViewById(R.id.etItem);
         rvItems= findViewById(R.id.rvItems);
 
-//        items = new ArrayList<>();
+        //Load items when app start
         loadItems();
 
+        //Click event handlers
         ItemsAdapter.OnLongClickListener onLongClickListener= new ItemsAdapter.OnLongClickListener(){
             @Override
             public void onItemLongClicked(int position) {
@@ -54,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        //Activity
         ItemsAdapter.OnClickListener clickListener= new ItemsAdapter.OnClickListener() {
             @Override
             public void onItemClicked(int position) {
-                Log.d("main activity","Single click at position "+position);
+//                Log.d("main activity","Single click at position "+position);
+                //MainActivity -> EditActivity
                 Intent i= new Intent(MainActivity.this,EditActivity.class);
                 i.putExtra(KEY_ITEM_TEXT,items.get(position));
                 i.putExtra(KEY_ITEM_POSITION,position);
@@ -70,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         rvItems.setAdapter(itemsAdapter);
         rvItems.setLayoutManager(new LinearLayoutManager(this));
 
+        //Add button click event
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Update item selected
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
     //    super.onActivityResult(requestCode, resultCode, data);
@@ -99,10 +103,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    //Getting Item Data
     private File getDatafile(){
         return new File(getFilesDir(),"data.txt");
     }
 
+    //Load Item Data
     private void loadItems(){
         try {
             items = new ArrayList<>(org.apache.commons.io.FileUtils.readLines(getDatafile(), Charset.defaultCharset()));
@@ -112,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //Save Item data
     private void saveItems(){
         try{
             org.apache.commons.io.FileUtils.writeLines(getDatafile(),items);

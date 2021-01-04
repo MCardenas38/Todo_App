@@ -4,6 +4,7 @@
 * Create a simple Android application for users to create a todo list by adding, modifying, and deleteing items.
 
 Submitted by: Matthews Cardenas
+
 Time spent: 3 hours spent in total
 
 ## Features

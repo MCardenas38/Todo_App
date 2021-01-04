@@ -1,6 +1,7 @@
 # Android Todo Application
 
 ## Objective
+![](./gif/Add.gif)
 * Create a simple Android application to record user todo items.
 
 ## Features

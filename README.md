@@ -31,6 +31,30 @@ the same items will be displayed in their appropriate order.
 
 ![](./gif/Persistence.gif)
 
+## User Stories
+
+The following **required** functionality is completed:
+
+* [ ] User can **view a list of todo items**
+* [ ] User can **successfully add and remove items** from the todo list
+* [ ] User's **list of items persisted** upon modification and and retrieved properly on app restart
+
+The following **optional** features are implemented:
+
+* [ ] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+
+The following **additional** features are implemented:
+
+* [ ] List anything else that you can get done to improve the app functionality!
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+<img src='https://imgur.com/qi6BaXr' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 ## License
 
     Copyright 2021 Matthews Cardenas

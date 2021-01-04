@@ -1,7 +1,7 @@
 # Project 1 - Todo Application
 
 ## Objective
-* Create a simple Android application for users to create a todo list by adding, modifying, and deleteing items.
+Create a simple Android application for users to create a todo list by adding, modifying, and deleteing items.
 
 Submitted by: Matthews Cardenas
 

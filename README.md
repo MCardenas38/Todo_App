@@ -22,7 +22,7 @@ item on the list.
 ![](./gif/Edit.gif)
 
 ### Persistence
-* After adding/modifing/deleting items in the todo list, the user can terminate the application. Once the application is started again
+* After adding/modifing/deleting items in the todo list, the user can terminate the application. Once the application starts again
 the same items will be displayed in their appropriate order. 
 
 ![](./gif/Persistence.gif)
